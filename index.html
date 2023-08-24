@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Proyecto Final</title>
+    <script src="./custom.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="fila_prueba" style="background-color:#d40000">
+            <div>
+                <h1 class="text-center"><font color="#fdfdfd">VINOTECA DUFF</font></h1>
+            </div>
+        </div>
+        
+        <div>
+            <div id="misprods" class="row">
+                <!-- Aqui los productos -->
+            </div>
+        </div>
+        
+        <div>
+            <h4>Tu carrito: </h4>
+            <p id="cantidad"><!-- aqui cantidad --></p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody id="tablabody">
+                    <!-- aqui tabla carrito -->
+                </tbody>
+            </table>
+            <h4 id="total">Total a pagar $:</h4>
+        </div>
+        <button id="finalizar" class="btn btn-success">Finalizar compra</button>
+        <form action="/my-handling-form-page" method="post" id="formulario">
+          <h1 class="text-center" style="background-color:#d40000"><font color="#fdfdfd">Formulario de envio</font></h1>
+            <style>form {
+                /* Centrar el formulario en la página */
+                margin: 0 auto;
+                width: 400px;
+                /* Esquema del formulario */
+                padding: 1em;
+                border: 1px solid #ccc;
+                border-radius: 1em;
+              }
+              
+              ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+              }
+              
+              form li + li {
+                margin-top: 1em;
+              }</style>
+            <ul>
+              <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name" />
+              </li>
+              <li>
+                <label for="msg">Edad:</label>
+                <input type="edad" id="edad" name="años" />
+              </li>
+              <li>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="user_mail" />
+              </li>
+              <li>
+                <label for="direccion">Domicilio:</label>
+                <input type="text" id="direccion" name="direccion" />
+              </li>
+            </ul>
+        
+            <div>
+                <button type="button" id="datos" class="btn btn-success">Enviar datos</button>
+                <button type="reset" id="borrar" class="btn btn-success" style="background-color:#d40000">Reset</button>
+            </div>
+
+        
+          </form>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Sweet alert 2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js"></script>
+    <!-- Mi script -->
+    <script src="productos.js"></script>
+    <script src="logica.js"></script>
+
+
+    <section class="weather-content">
+      <h1 class="text-center" style="background-color:#0d0abb"><font color="#fdfdfd">Buscador del clima</font></h1>
+     
+      
+      <div class="result">
+          <p class="text-center">Agrege cuidad y pais</p>
+        
+          
+      </div>
+      <form action="" method="POST" class="get-weather">
+          <input type="text" name="city" id="city" placeholder="Escribe ciudad...">
+          <select name="" id="country">
+              <option disabled selected value="">Seleccione Pais</option>
+              <option value="AR">Argentina</option>
+              <option value="CO">Colombia</option>
+              <option value="CR">Costa Rica</option>
+              <option value="ES">España</option>
+              <option value="US">Estados Unidos</option>
+              <option value="MX">México</option>
+              <option value="PE">Perú</option>
+              <option value="BR">Brasil</option>
+          </select>
+          <input type="submit" name="" id="" value="BUSCAR" class="btn btn-success" style="background-color:#0602ff">
+          
+
+      </form>
+  </section>
+    
+    
+</body>
+
+
+</html>
